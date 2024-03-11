@@ -1,0 +1,28 @@
+*{
+    border:1px solid black;
+}
+
+.divMain{
+    display: flex;
+    width: 100%;
+}
+
+.div1{
+    width: 40%;
+}
+
+.div2{
+    width: 60%;
+}
+
+.div2-2{
+    display: flex;
+}
+
+.div2-2-1{
+    width: 70%;
+}
+
+.div2-2-2{
+    width: 30%;
+}
