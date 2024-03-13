@@ -1,10 +1,12 @@
-*{
-    border:1px solid black;
-}
-
 .divMain{
     display: flex;
     width: 100%;
+
+    border:1px solid black;
+
+    *{
+        border:1px solid black;
+    }
 }
 
 .div1{
@@ -25,4 +27,126 @@
 
 .div2-2-2{
     width: 30%;
+}
+
+/* /product */
+
+.prodMain{
+    margin: 20px 40vh;
+    display:flex;
+    flex-wrap: wrap;
+    padding: 0px 10vh;
+}
+
+.product{
+    margin: 2vh auto;
+    border: black 2px solid;
+    padding: 10px 10px 20px 10px;
+    width: 220px;
+    /* padding: 17vh 15vh; */
+    /* width: 290px;
+    background-color: #FDFEFE;
+    margin: 10px 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: #efefef 2px solid; */
+}
+
+.prodFavMain{
+    /* border: 1px solid black; */
+    display: inline-block;
+    position: absolute;
+    width: 212px;
+    /* display: inline-block;
+    width: 270px;
+    position: absolute;
+    padding: 5px 0px; */
+}
+
+.prodWishList{
+    padding:2px 10px;
+    position: absolute;
+    /* padding:2px 10px;
+    text-align: right;
+    font-size: 22px;
+    position: absolute; */
+    
+
+}
+
+.prodSale{
+    float: right;
+    background-color: #FFC000;
+    margin-right: -13px;
+    padding: 5px 10px;
+    /* float: right;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right:-10px;
+    padding: 5px 10px;
+    background-color: #FFC000;
+    color: #28282B;
+    font-weight: bold; */
+}
+
+.prodImgMain{
+
+}
+
+.prodImg{
+
+    height: 200px;
+    width: 199px;
+}
+
+/* testing position: absolute; */
+
+.testPosAbsolute{
+ 
+}
+
+.absMain{
+    border: 2px solid rgb(197, 193, 193);
+    margin-top: 50px;
+    margin-left:auto;
+    margin-right: auto;
+    width: 250px;
+}
+
+.absTop{
+    /* border: 2px solid black; */
+    margin: 2px;
+    padding: 2px;
+    display: inline-block;
+    width: 240px;
+    position: absolute;
+}
+
+.absHot{
+    position: absolute;
+    color:white;
+    background-color: red;
+    width:80px;
+    margin-left: -5px;
+}
+
+
+.absSale{
+    color: black;
+    background-color: yellow;
+    width:80px;
+    margin-right: -10px;
+    float: right;
+}
+
+.absImg{
+    width: 243px;
+    height: 149px;
+}
+
+.absImgMain{
+    padding: 2px;
+
 }
