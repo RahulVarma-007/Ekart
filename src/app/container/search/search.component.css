@@ -26,10 +26,21 @@
 .btn-search {
     padding: 7.5px 30px;
     background-color: #28282B;
-    margin-left: -5px;
+    margin-left: -1px;
     color: #fff;
     margin-bottom: 3px;
     border-radius: 0px;
+}
+
+.btn-search-disabled {
+    padding: 7.5px 30px;
+    background-color: #aaa;
+    margin-left: -1px;
+    color: #999;
+    margin-bottom: 3px;
+    border-radius: 0px;
+    border: #aaa 1px solid;
+    cursor: not-allowed;
 }
 
 .ekart-search-result-for{
