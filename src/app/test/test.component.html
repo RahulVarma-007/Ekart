@@ -46,3 +46,46 @@
         </div>
     </div>
 </div>
+
+<div class="viewChildrenTest t-center">
+    <br>
+    <h3>Testing &#64;ViewChildren</h3>
+    <br>
+    <input type="text" placeholder="first name" #inputEl>
+    <br><br>
+    <input type="text" placeholder="middle name" #inputEl>
+    <br><br>
+    <input type="text" placeholder="last name" #inputEl>
+    <br><br>
+    <button type="button" class="btn btn-primary" (click)="showChildren()">Submit</button>
+    <br><br>
+</div>
+
+<div class="ngTemplateTest t-center">
+    <h5>Testing ng-template</h5>
+
+    <ng-template #myTestTemplate>
+        <h5>Inside Template</h5>
+        <p>Para in template</p>
+    </ng-template>
+
+    <!-- ngTempalteOutlet Directive -->
+    <div *ngTemplateOutlet="myTestTemplate"></div>
+    <ng-container *ngTemplateOutlet="myTestTemplate"></ng-container>
+
+</div>
+
+<div class="ngContainerTest t-center">
+    <br><br>
+    <h5>Testing ng-container</h5>
+
+    <ng-container *ngIf="toggle; else toggleOff">
+        <p>Toggle On</p>
+    </ng-container>
+
+    <ng-template #toggleOff>
+        <p>Toggle Off</p>
+    </ng-template>
+
+    <button class="btn btn-primary" (click)="onToggle()">Toggle</button>
+</div>

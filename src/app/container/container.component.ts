@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @Component({
   selector: 'app-container',
@@ -38,6 +39,14 @@ export class ContainerComponent {
       this.addToCart++;
     }
 
+  }
+
+  searchText: string = '';
+
+  @ViewChild(ProductListComponent) productListComponent: ElementRef;
+
+  setSearchText(value: string){
+    this.searchText = value;
   }
 
 }
