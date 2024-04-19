@@ -1,0 +1,14 @@
+<div class="childMain">
+    <h3>Test Child</h3>
+    <hr>
+    <ng-content></ng-content>
+    <hr>
+    <button class="btn btn-primary" (click)="showContentChild()">Submit</button>
+    <button class="btn btn-primary" (click)="showChild2()">Submit 2</button>
+    <button class="btn btn-primary" (click)="showParaChildren()">Show all para children</button>
+    <button class="btn btn-primary" (click)="showComponentChildren()">Show all component children</button>
+
+    <hr>
+    <p>{{contentChildOutput}}</p>
+    <br>
+</div>

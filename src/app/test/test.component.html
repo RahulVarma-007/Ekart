@@ -89,3 +89,30 @@
 
     <button class="btn btn-primary" (click)="onToggle()">Toggle</button>
 </div>
+
+<div class="ContentChildTest t-center">
+    <br><br>
+    <test-child>
+        <p #para>Body in test child from ng content</p>
+        <p #para>Content Children para 2</p>
+        <p #para>Content Children para 3</p>
+        <test-child2 [name]="'Rahul'"></test-child2>
+        <test-child2 [name]="'Varma'"></test-child2>
+        <test-child2 [name]="'Sujatha'"></test-child2>
+    </test-child>
+    
+</div>
+
+<div class="ngOnChangesTest t-center">
+    <br>
+    <h3>Life Cycle Hooks</h3>
+
+    <input type="text" #inputVal (focus)="0">
+    <br><br>
+    <button class="btn btn-primary" (click)="onSubmit(inputVal)">Submit</button>
+    <lifecycle-test [message]="inputValue" *ngIf="!toDestroy">
+        <p #temppara>User has entered: {{inputValue}}</p>
+    </lifecycle-test>
+    <button class="btn btn-primary" (click)="DestroyComponent()">Show/Hide</button>
+    <br><br>
+</div>

@@ -19,4 +19,20 @@ export class TestComponent {
   onToggle(){
     this.toggle = !this.toggle;
   }
+
+  //life cycle hooks
+  inputValue:string;
+  // inputValue:string[] = ['Hello','Hi There'];
+
+  onSubmit(input: HTMLInputElement){
+    this.inputValue = input.value;
+    // this.inputValue.push(input.value);
+  }
+
+  //ngOnDestroy
+  toDestroy: boolean = false;
+
+  DestroyComponent(){
+    this.toDestroy = !this.toDestroy;
+  }
 }

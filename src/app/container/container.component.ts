@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { ProductListComponent } from './product-list/product-list.component';
+import { Product } from '../Models/Product';
 
 @Component({
   selector: 'app-container',
@@ -43,7 +44,14 @@ export class ContainerComponent {
 
   searchText: string = '';
 
-  @ViewChild(ProductListComponent) productListComponent: ElementRef;
+  @ViewChild('productListComp') productListComponent: ElementRef;
+
+  prod:ProductListComponent;
+
+  ngAfterViewInit(){
+    this.prod = this.productListComponent.nativeElement;
+  }
+
 
   setSearchText(value: string){
     this.searchText = value;
