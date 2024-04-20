@@ -11,9 +11,9 @@
     <input (input)="onNameChange($event)"><br>
     <p>name={{name}}</p> -->
   <app-search (searchTextChanged)="setSearchText($event)"></app-search>
-  <product-list [searchText]="searchText" #productListComp></product-list>
-  <product-detail *ngIf="prod"
-    [productListComp]="prod"></product-detail>
+  <product-list [searchText]="searchText" #productListComponent></product-list>
+  <product-detail *ngIf="productListComponent.selectedProduct"
+    [productListComp]="productListComponent"></product-detail>
 
   <div class="ekart-featured-product">
     <div class="ekart-featured-product-heading">

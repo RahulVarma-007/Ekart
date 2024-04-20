@@ -44,13 +44,21 @@ export class ContainerComponent {
 
   searchText: string = '';
 
-  @ViewChild('productListComp') productListComponent: ElementRef;
+  @ViewChild('productListComp') productListComponent: ProductListComponent;
 
-  prod:ProductListComponent;
+  // prod:ProductListComponent;
+  // prodSelected:Product;
 
-  ngAfterViewInit(){
-    this.prod = this.productListComponent.nativeElement;
-  }
+
+  // ngAfterViewInit(){
+  //   this.prod = this.productListComponent;
+  //   console.log(this.prod)
+  // }
+
+  // ngAfterViewChecked(){
+  //   this.prodSelected = this.productListComponent.selectedProduct;
+  //   console.log(this.productListComponent);
+  // }
 
 
   setSearchText(value: string){

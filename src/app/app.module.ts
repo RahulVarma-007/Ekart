@@ -19,6 +19,7 @@ import { FeaturedBrandsComponent } from './container/featured-brands/featured-br
 import { TestChildComponent } from './test/test-child/test-child.component';
 import { TestChild2Component } from './test/test-child2/test-child2.component';
 import { LifecycleTestComponent } from './test/lifecycle-test/lifecycle-test.component';
+import { SetBackground } from './CustomDirectives/SetBackground.directive';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { LifecycleTestComponent } from './test/lifecycle-test/lifecycle-test.com
     FeaturedBrandsComponent,
     TestChildComponent,
     TestChild2Component,
-    LifecycleTestComponent
+    LifecycleTestComponent,
+    SetBackground
   ],
   imports: [
     BrowserModule,

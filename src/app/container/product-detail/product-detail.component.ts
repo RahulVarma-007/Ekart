@@ -20,5 +20,10 @@ export class ProductDetailComponent {
     this.product = this.productListComp.selectedProduct;
 
   }
+
+  closeProduct(){
+    this.productListComp.selectedProduct = null;
+  }
+
   
 }
