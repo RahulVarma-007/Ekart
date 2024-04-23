@@ -154,3 +154,20 @@
 .t-center{
     text-align: center;
 }
+
+.customClassDirContainer{
+    background-color: aliceblue;
+    margin: 0% 5%;
+}
+
+.customClassDirBorder{
+    border: 2px coral solid;
+}
+
+.customClassDirFont{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.customStyleDirContainer{
+    margin: 0% 5%;
+}

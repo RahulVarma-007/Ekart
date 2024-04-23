@@ -35,4 +35,13 @@ export class TestComponent {
   DestroyComponent(){
     this.toDestroy = !this.toDestroy;
   }
+
+  //custom directives
+  active: boolean = false;
+
+  //structural directive
+  display: boolean = false;
+  showMore(){
+    this.display = true;
+  }
 }

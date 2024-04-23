@@ -116,3 +116,73 @@
     <button class="btn btn-primary" (click)="DestroyComponent()">Show/Hide</button>
     <br><br>
 </div>
+
+<div class="customClassDirective t-center">
+    <br>
+    <h3>Custom Class Directive</h3>
+    <div [appClass]="{'customClassDirContainer': true, 'customClassDirBorder': false, 'customClassDirFont': 5 > 2}">
+        <p>For those who are interested in finding random paragraphs, that's exactly what this webpage provides. 
+            If both a random word and a random sentence aren't quite long enough for your needs, then a random paragraph 
+            might be the perfect solution. Once you arrive at this page, you'll see a random paragraph. If you need another one, 
+            all you need to do is click on the "next paragraph" button. If you happen to need several random paragraphs all at once, 
+            you can use this other paragraph generator. Below you can find a number of ways that this generator can be used.</p>
+    </div>
+    <br><br>
+</div>
+
+<div class="customStyleDirective t-center">
+    <br>
+    <h3>Custom Style Directive</h3>
+    <div class="customStyleDirContainer" [appStyle]="{backgroundColor: active? 'green':'red', color: active? 'white':'black'}">
+    <!-- [ngStyle]="{backgroundColor: active? 'green':'red', color: active? 'white':'black'}"> -->
+        <p>For those who are interested in finding random paragraphs, that's exactly what this webpage provides. 
+            If both a random word and a random sentence aren't quite long enough for your needs, then a random paragraph 
+            might be the perfect solution. Once you arrive at this page, you'll see a random paragraph. If you need another one, 
+            all you need to do is click on the "next paragraph" button. If you happen to need several random paragraphs all at once, 
+            you can use this other paragraph generator. Below you can find a number of ways that this generator can be used.</p>
+    </div>
+    <br><br>
+</div>
+
+<!-- <div class="structuralDirective t-center">
+    <br>
+    <h3>Structural Directive</h3>
+    <button class="btn btn-primary" (click)="showMore()">Drop</button>
+    <div *ngIf="display; else tempDiv">
+        <h4>Random Content</h4>
+        <p>For those who are interested in finding random paragraphs, that's exactly what this webpage provides. 
+            If both a random word and a random sentence aren't quite long enough for your needs, then a random paragraph</p>
+        <h4>Random Content 2</h4>
+        <p>For those who are interested in finding random paragraphs, that's exactly what this webpage provides. 
+            If both a random word and a random sentence aren't quite long enough for your needs, then a random paragraph</p>
+    </div>
+    <ng-template #tempDiv>
+        <h4>Temp Div</h4>
+        <p>Temp para ....</p>
+    </ng-template>
+    <br><br>
+</div> -->
+
+<div class="structuralDirective t-center">
+    <br>
+    <h3>Structural Directive</h3>
+    <button class="btn btn-primary" (click)="showMore()">Drop</button>
+    <ng-template [ngIf]="display" [ngIfElse]='tempDiv'>
+        <div>
+            <h4>Random Content</h4>
+            <p>For those who are interested in finding random paragraphs, that's exactly what this webpage provides. 
+                If both a random word and a random sentence aren't quite long enough for your needs, then a random paragraph</p>
+            <h4>Random Content 2</h4>
+            <p>For those who are interested in finding random paragraphs, that's exactly what this webpage provides. 
+                If both a random word and a random sentence aren't quite long enough for your needs, then a random paragraph</p>
+        </div>
+        
+    </ng-template>
+    <ng-template #tempDiv>
+        <h4>Temp Div</h4>
+        <p>Temp para ....</p>
+    </ng-template>
+    
+    <br><br>
+</div>
+
