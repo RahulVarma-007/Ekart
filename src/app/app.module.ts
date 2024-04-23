@@ -20,6 +20,9 @@ import { TestChildComponent } from './test/test-child/test-child.component';
 import { TestChild2Component } from './test/test-child2/test-child2.component';
 import { LifecycleTestComponent } from './test/lifecycle-test/lifecycle-test.component';
 import { SetBackground } from './CustomDirectives/SetBackground.directive';
+import { HighlightDirective } from './CustomDirectives/highlight.directive';
+import { AppHoverDirective } from './CustomDirectives/app-hover.directive';
+import { DisableProductDirective } from './CustomDirectives/disable-product.directive';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { SetBackground } from './CustomDirectives/SetBackground.directive';
     TestChildComponent,
     TestChild2Component,
     LifecycleTestComponent,
-    SetBackground
+    SetBackground,
+    HighlightDirective,
+    AppHoverDirective,
+    DisableProductDirective
   ],
   imports: [
     BrowserModule,
