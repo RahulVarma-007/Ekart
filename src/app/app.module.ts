@@ -25,6 +25,18 @@ import { AppHoverDirective } from './CustomDirectives/app-hover.directive';
 import { DisableProductDirective } from './CustomDirectives/disable-product.directive';
 import { ClassDirective } from './test/TestCustomDirectives/class.directive';
 import { StyleDirective } from './test/TestCustomDirectives/style.directive';
+import { IfDirective } from './test/TestCustomDirectives/if.directive';
+import { TestRandomComponent } from './test/test-random/test-random.component';
+import { TestServiceComponent } from './test-service/test-service.component';
+import { HomeComponent } from './test-service/home/home.component';
+import { AdminComponent } from './test-service/admin/admin.component';
+import { UserDetailComponent } from './test-service/admin/user-detail/user-detail.component';
+import { HeroComponent } from './test-service/home/hero/hero.component';
+import { SidebarComponent } from './test-service/home/sidebar/sidebar.component';
+import { SubscribeService } from './Services/subscribe.service';
+import { UserListComponent } from './test-service/admin/user-list/user-list.component';
+import { UserService } from './Services/user.service';
+import { LoggerService } from './Services/logger.service';
 
 @NgModule({
   declarations: [
@@ -49,14 +61,23 @@ import { StyleDirective } from './test/TestCustomDirectives/style.directive';
     AppHoverDirective,
     DisableProductDirective,
     ClassDirective,
-    StyleDirective
+    StyleDirective,
+    IfDirective,
+    TestRandomComponent,
+    TestServiceComponent,
+    HomeComponent,
+    AdminComponent,
+    UserDetailComponent,
+    HeroComponent,
+    SidebarComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [SubscribeService, UserService, LoggerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

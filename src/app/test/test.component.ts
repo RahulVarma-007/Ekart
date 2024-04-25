@@ -1,9 +1,10 @@
-import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChildren, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'test',
   templateUrl: './test.component.html',
   styleUrl: './test.component.css'
+  // encapsulation: ViewEncapsulation.None
 })
 export class TestComponent {
   
@@ -41,7 +42,15 @@ export class TestComponent {
 
   //structural directive
   display: boolean = false;
+
   showMore(){
     this.display = true;
+  }
+
+    //ngSwitch
+  tab: string = '';
+
+  setTabValue(input: string){
+    this.tab = input;
   }
 }

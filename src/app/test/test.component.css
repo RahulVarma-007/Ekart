@@ -171,3 +171,8 @@
 .customStyleDirContainer{
     margin: 0% 5%;
 }
+
+button{
+    background-color: red;
+    color: white;
+}
