@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { USER_TOKEN } from '../../../app.module';
+import { User } from '../../../Models/User';
 
 @Component({
   selector: 'app-user-detail',
@@ -7,12 +9,12 @@ import { Component } from '@angular/core';
 })
 export class UserDetailComponent {
 
-  // selectedUser: User;
-  // userService = inject(USER_TOKEN);
+  selectedUser: User;
+  userService = inject(USER_TOKEN);
 
-  // ngOnInit(){
-  //   this.userService.OnUserDetailsClicked.subscribe((data: User) => {
-  //     this.selectedUser = data;
-  //   })
-  // }
+  ngOnInit(){
+    this.userService.OnUserDetailsClicked.subscribe((data: User) => {
+      this.selectedUser = data;
+    })
+  }
 }
